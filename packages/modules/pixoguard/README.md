@@ -16,7 +16,7 @@ Database schema auditing and security analysis for PixoLink. Scans your database
 ## Installation
 
 ```bash
-npm install @pixora/pixolink-pixoguard
+npm install @mamdouh-aboammar/pixolink-pixoguard
 ```
 
 ## Quick Start
@@ -24,8 +24,8 @@ npm install @pixora/pixolink-pixoguard
 ### Basic Usage
 
 ```typescript
-import { createPixoLink } from '@pixora/pixolink';
-import { PixoGuardPlugin } from '@pixora/pixolink-pixoguard';
+import { createPixoLink } from '@mamdouh-aboammar/pixolink';
+import { PixoGuardPlugin } from '@mamdouh-aboammar/pixolink-pixoguard';
 
 // Create plugin
 const pixoguard = new PixoGuardPlugin();
@@ -52,7 +52,7 @@ console.log('Scan complete:', report.summary);
 ### Supabase Configuration
 
 ```typescript
-import { PixoGuardPlugin } from '@pixora/pixolink-pixoguard';
+import { PixoGuardPlugin } from '@mamdouh-aboammar/pixolink-pixoguard';
 
 const pixoguard = new PixoGuardPlugin({
   defaultOptions: {
@@ -320,7 +320,7 @@ interface ReportItem {
 ### Custom Database Scanner
 
 ```typescript
-import { BaseDatabaseScanner, type DatabaseMetadata } from '@pixora/pixolink-pixoguard';
+import { BaseDatabaseScanner, type DatabaseMetadata } from '@mamdouh-aboammar/pixolink-pixoguard';
 
 class MySQLScanner extends BaseDatabaseScanner {
   async connect(connection: DatabaseConnection): Promise<void> {
@@ -350,7 +350,7 @@ const pixoguard = new PixoGuardPlugin({
 ### Custom Code Scanner
 
 ```typescript
-import { type CodeScanner, type CodeScanResult } from '@pixora/pixolink-pixoguard';
+import { type CodeScanner, type CodeScanResult } from '@mamdouh-aboammar/pixolink-pixoguard';
 
 class PrismaCodeScanner implements CodeScanner {
   async scan(sourceRoot: string): Promise<CodeScanResult> {
@@ -427,7 +427,7 @@ PIXOGUARD_PR_BRANCH_NAME=pixoguard/auto-fixes
 ### Integration with Admin Dashboard
 
 ```typescript
-import { PixoGuardPlugin } from '@pixora/pixolink-pixoguard';
+import { PixoGuardPlugin } from '@mamdouh-aboammar/pixolink-pixoguard';
 
 const pixoguard = new PixoGuardPlugin();
 
@@ -477,7 +477,7 @@ job.start();
 ### Custom Analysis Layer
 
 ```typescript
-import { type Layer, type LayerResult } from '@pixora/pixolink-pixoguard';
+import { type Layer, type LayerResult } from '@mamdouh-aboammar/pixolink-pixoguard';
 
 const customLayer: Layer = {
   id: 'custom-security',
@@ -534,7 +534,7 @@ const findings = await analyzer.analyze(dbMetadata, codeScan);
 
 **After (PixoLink Plugin):**
 ```typescript
-import { PixoGuardPlugin } from '@pixora/pixolink-pixoguard';
+import { PixoGuardPlugin } from '@mamdouh-aboammar/pixolink-pixoguard';
 
 const pixoguard = new PixoGuardPlugin();
 
@@ -553,7 +553,7 @@ const findings = report.findings;
 **Advanced (Direct Access):**
 ```typescript
 // Still access original pixoguard functions
-import { scanSupabase, scanReact } from '@pixora/pixolink-pixoguard';
+import { scanSupabase, scanReact } from '@mamdouh-aboammar/pixolink-pixoguard';
 
 const dbMetadata = await scanSupabase({
   supabaseUrl: process.env.SUPABASE_URL,

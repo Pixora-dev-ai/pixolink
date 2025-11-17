@@ -22,14 +22,14 @@ PixoPay provides a unified payment processing interface supporting three payment
 ## Installation
 
 ```bash
-npm install @pixora/pixolink-pixopay
+npm install @mamdouh-aboammar/pixolink-pixopay
 ```
 
 ## Quick Start
 
 ```typescript
-import { PixoPayPlugin } from '@pixora/pixolink-pixopay';
-import { initPixoLink } from '@pixora/pixolink';
+import { PixoPayPlugin } from '@mamdouh-aboammar/pixolink-pixopay';
+import { initPixoLink } from '@mamdouh-aboammar/pixolink';
 
 // Initialize PixoLink with PixoPay
 const pixo = await initPixoLink({
@@ -309,7 +309,7 @@ const result = await pixopay.createPayment(
 ### Stripe-Specific Features
 
 ```typescript
-import { StripeAdapter } from '@pixora/pixolink-pixopay';
+import { StripeAdapter } from '@mamdouh-aboammar/pixolink-pixopay';
 
 const stripe = new StripeAdapter();
 await stripe.init(stripeConfig);
@@ -339,7 +339,7 @@ const customer = await stripe.createCustomer({
 If you need to use adapters without the plugin wrapper:
 
 ```typescript
-import { InstapayAdapter } from '@pixora/pixolink-pixopay';
+import { InstapayAdapter } from '@mamdouh-aboammar/pixolink-pixopay';
 
 const instapay = new InstapayAdapter();
 await instapay.init({
@@ -358,7 +358,7 @@ const healthy = await instapay.isHealthy();
 ### Transaction Export/Import
 
 ```typescript
-import { TransactionManager } from '@pixora/pixolink-pixopay';
+import { TransactionManager } from '@mamdouh-aboammar/pixolink-pixopay';
 
 const manager = new TransactionManager();
 
@@ -506,7 +506,7 @@ try {
 ### Unit Tests
 
 ```typescript
-import { InstapayAdapter } from '@pixora/pixolink-pixopay';
+import { InstapayAdapter } from '@mamdouh-aboammar/pixolink-pixopay';
 import { describe, it, expect } from 'vitest';
 
 describe('InstapayAdapter', () => {
@@ -563,7 +563,7 @@ describe('InstapayAdapter', () => {
 The `TransactionManager` currently uses in-memory storage. For production, extend it with database persistence:
 
 ```typescript
-import { TransactionManager, Transaction } from '@pixora/pixolink-pixopay';
+import { TransactionManager, Transaction } from '@mamdouh-aboammar/pixolink-pixopay';
 import { db } from './database';
 
 class DatabaseTransactionManager extends TransactionManager {
@@ -625,14 +625,14 @@ import type {
   StripeConfig,
   InstapayConfig,
   VFCashConfig,
-} from '@pixora/pixolink-pixopay';
+} from '@mamdouh-aboammar/pixolink-pixopay';
 
 // Zod schemas for validation
 import {
   CustomerInfoSchema,
   PaymentRequestSchema,
   RefundRequestSchema,
-} from '@pixora/pixolink-pixopay';
+} from '@mamdouh-aboammar/pixolink-pixopay';
 ```
 
 ## License

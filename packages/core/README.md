@@ -1,9 +1,9 @@
-# @pixora/pixolink
+# @mamdouh-aboammar/pixolink
 
 <div align="center">
 
 ![PixoLink Logo](https://img.shields.io/badge/PixoLink-Core-blue?style=for-the-badge)
-[![npm version](https://img.shields.io/npm/v/@pixora/pixolink?style=flat-square)](https://www.npmjs.com/package/@pixora/pixolink)
+[![npm version](https://img.shields.io/npm/v/@mamdouh-aboammar/pixolink?style=flat-square)](https://www.npmjs.com/package/@mamdouh-aboammar/pixolink)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](../../LICENSE)
 
 **Unified SDK orchestrator for PixoRA ecosystem**
@@ -26,19 +26,19 @@ PixoLink Core is the central orchestration layer for the PixoRA SDK ecosystem. I
 
 ```bash
 # Using npm
-npm install @pixora/pixolink
+npm install @mamdouh-aboammar/pixolink
 
 # Using pnpm
-pnpm add @pixora/pixolink
+pnpm add @mamdouh-aboammar/pixolink
 
 # Using yarn
-yarn add @pixora/pixolink
+yarn add @mamdouh-aboammar/pixolink
 ```
 
 ## 🚀 Quick Start
 
 ```typescript
-import { PixoLink } from '@pixora/pixolink';
+import { PixoLink } from '@mamdouh-aboammar/pixolink';
 
 // Initialize PixoLink
 const pixolink = new PixoLink({
@@ -54,17 +54,17 @@ await pixolink.initialize();
 
 PixoLink Core works seamlessly with these modules:
 
-- **[@pixora/pixolink-admin-dashboard](../modules/admin-dashboard)** - Admin & user management
-- **[@pixora/pixolink-intelligence-core](../modules/intelligence-core)** - AI coordination
-- **[@pixora/pixolink-logic-guardian](../modules/logic-guardian)** - Runtime validation
-- **[@pixora/pixolink-pixoguard](../modules/pixoguard)** - Database security
-- **[@pixora/pixolink-pixopay](../modules/pixopay)** - Payment processing
-- **[@pixora/pixolink-weavai](../modules/weavai)** - AI orchestration
+- **[@mamdouh-aboammar/pixolink-admin-dashboard](../modules/admin-dashboard)** - Admin & user management
+- **[@mamdouh-aboammar/pixolink-intelligence-core](../modules/intelligence-core)** - AI coordination
+- **[@mamdouh-aboammar/pixolink-logic-guardian](../modules/logic-guardian)** - Runtime validation
+- **[@mamdouh-aboammar/pixolink-pixoguard](../modules/pixoguard)** - Database security
+- **[@mamdouh-aboammar/pixolink-pixopay](../modules/pixopay)** - Payment processing
+- **[@mamdouh-aboammar/pixolink-weavai](../modules/weavai)** - AI orchestration
 
 ## 🔧 Configuration
 
 ```typescript
-import { PixoLink, PixoLinkConfig } from '@pixora/pixolink';
+import { PixoLink, PixoLinkConfig } from '@mamdouh-aboammar/pixolink';
 
 const config: PixoLinkConfig = {
   apiKey: process.env.PIXOLINK_API_KEY,
@@ -100,6 +100,6 @@ MIT © 2025 PixoRA Team
 ## 🔗 Links
 
 - [GitHub Repository](https://github.com/pixora/pixolink)
-- [npm Package](https://www.npmjs.com/package/@pixora/pixolink)
+- [npm Package](https://www.npmjs.com/package/@mamdouh-aboammar/pixolink)
 - [Documentation](https://docs.pixora.ai/pixolink)
 - [Issue Tracker](https://github.com/pixora/pixolink/issues)

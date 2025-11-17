@@ -1,4 +1,4 @@
-# @pixora/pixolink-logic-guardian
+# @mamdouh-aboammar/pixolink-logic-guardian
 
 Logic Guardian module for PixoLink SDK — Runtime validation, circuit breakers, and defensive programming patterns.
 
@@ -16,13 +16,13 @@ Logic Guardian module for PixoLink SDK — Runtime validation, circuit breakers,
 This module is included with PixoLink SDK:
 
 ```bash
-npm install @pixora/pixolink
+npm install @mamdouh-aboammar/pixolink
 ```
 
 Or install separately:
 
 ```bash
-npm install @pixora/pixolink-logic-guardian
+npm install @mamdouh-aboammar/pixolink-logic-guardian
 ```
 
 ## Configuration
@@ -61,7 +61,7 @@ Add to your `pixo.config.json`:
 ### Basic Validation
 
 ```typescript
-import { usePlugin } from '@pixora/pixolink';
+import { usePlugin } from '@mamdouh-aboammar/pixolink';
 import { z } from 'zod';
 
 const guardian = usePlugin('logic-guardian');
@@ -193,7 +193,7 @@ try {
 ### Complete Example
 
 ```typescript
-import { PixoLink, usePlugin } from '@pixora/pixolink';
+import { PixoLink, usePlugin } from '@mamdouh-aboammar/pixolink';
 import { z } from 'zod';
 
 await PixoLink.init('./pixo.config.json');

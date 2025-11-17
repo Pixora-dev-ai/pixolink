@@ -1,4 +1,4 @@
-# @pixora/pixolink-weavai
+# @mamdouh-aboammar/pixolink-weavai
 
 WeavAi module for PixoLink SDK — Intelligent AI orchestration with multi-provider support, automatic fallback, caching, and advanced features.
 
@@ -20,13 +20,13 @@ WeavAi module for PixoLink SDK — Intelligent AI orchestration with multi-provi
 This module is included with PixoLink SDK:
 
 ```bash
-npm install @pixora/pixolink
+npm install @mamdouh-aboammar/pixolink
 ```
 
 Or install separately:
 
 ```bash
-npm install @pixora/pixolink-weavai
+npm install @mamdouh-aboammar/pixolink-weavai
 ```
 
 ## Configuration
@@ -84,7 +84,7 @@ Add to your `pixo.config.json`:
 ### Basic Text Generation
 
 ```typescript
-import { usePlugin } from '@pixora/pixolink';
+import { usePlugin } from '@mamdouh-aboammar/pixolink';
 
 const weavai = usePlugin('weavai');
 
@@ -233,7 +233,7 @@ const result = await weavai.generate('Create a product listing', {
 ### Event-Driven Integration
 
 ```typescript
-import { PixoLink } from '@pixora/pixolink';
+import { PixoLink } from '@mamdouh-aboammar/pixolink';
 
 const pixo = PixoLink.getInstance();
 
@@ -259,7 +259,7 @@ pixo.eventBus.on('weavai:telemetry', (event) => {
 ### Complete Example: AI-Powered Chat
 
 ```typescript
-import { PixoLink, usePlugin } from '@pixora/pixolink';
+import { PixoLink, usePlugin } from '@mamdouh-aboammar/pixolink';
 
 await PixoLink.init('./pixo.config.json');
 
@@ -305,7 +305,7 @@ console.log(`Cache hits: ${metrics.cacheHits} (${(metrics.cacheHits / metrics.to
 ### Complete Example: Content Generation Pipeline
 
 ```typescript
-import { PixoLink, usePlugin } from '@pixora/pixolink';
+import { PixoLink, usePlugin } from '@mamdouh-aboammar/pixolink';
 import { z } from 'zod';
 
 await PixoLink.init();

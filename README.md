@@ -3,7 +3,7 @@
 > **One SDK to rule them all** — Modular AI, Security, Payments, and Admin Platform
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![npm version](https://img.shields.io/npm/v/@pixora/pixolink.svg)](https://www.npmjs.com/package/@pixora/pixolink)
+[![npm version](https://img.shields.io/npm/v/@mamdouh-aboammar/pixolink.svg)](https://www.npmjs.com/package/@mamdouh-aboammar/pixolink)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7+-blue.svg)](https://www.typescriptlang.org/)
 
 ## 🚀 What is PixoLink?
@@ -31,13 +31,13 @@ PixoLink is a **unified SDK** that combines powerful subsystems into one modular
 
 ```bash
 # Using pnpm (recommended)
-pnpm add @pixora/pixolink
+pnpm add @mamdouh-aboammar/pixolink
 
 # Using npm
-npm install @pixora/pixolink
+npm install @mamdouh-aboammar/pixolink
 
 # Using yarn
-yarn add @pixora/pixolink
+yarn add @mamdouh-aboammar/pixolink
 ```
 
 ## 🎯 Quick Start
@@ -78,7 +78,7 @@ Create `pixo.config.json`:
 ### 2. Initialize SDK
 
 ```typescript
-import { PixoLink, useConnector } from '@pixora/pixolink';
+import { PixoLink, useConnector } from '@mamdouh-aboammar/pixolink';
 
 // Initialize once at app startup
 await PixoLink.init('./pixo.config.json');
@@ -93,7 +93,7 @@ console.log(result.url);
 ### 3. Use UI Components
 
 ```tsx
-import { PixoDashboard } from '@pixora/pixolink/ui';
+import { PixoDashboard } from '@mamdouh-aboammar/pixolink/ui';
 
 function AdminPage() {
   return <PixoDashboard />;

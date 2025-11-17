@@ -1,4 +1,4 @@
-# @pixora/pixolink-admin-dashboard
+# @mamdouh-aboammar/pixolink-admin-dashboard
 
 Admin Dashboard plugin for PixoLink — User management, credits, payments, and system administration.
 
@@ -14,7 +14,7 @@ The Admin Dashboard plugin provides comprehensive admin functionality APIs for m
 ## 📦 Installation
 
 ```bash
-pnpm add @pixora/pixolink-admin-dashboard
+pnpm add @mamdouh-aboammar/pixolink-admin-dashboard
 ```
 
 ## 🚀 Quick Start
@@ -22,8 +22,8 @@ pnpm add @pixora/pixolink-admin-dashboard
 ### Basic Setup
 
 ```typescript
-import { PixoLink } from '@pixora/pixolink-core';
-import { createAdminDashboardPlugin } from '@pixora/pixolink-admin-dashboard';
+import { PixoLink } from '@mamdouh-aboammar/pixolink-core';
+import { createAdminDashboardPlugin } from '@mamdouh-aboammar/pixolink-admin-dashboard';
 
 // Initialize PixoLink with Admin Dashboard
 const pixo = await PixoLink.init('./pixo.config.json');
@@ -370,7 +370,7 @@ import type {
   CreditTransaction,
   PaymentRecord,
   SystemStats,
-} from '@pixora/pixolink-admin-dashboard';
+} from '@mamdouh-aboammar/pixolink-admin-dashboard';
 
 // Fully typed configuration
 const config: AdminDashboardConfig = {
@@ -432,7 +432,7 @@ MIT © PixoRA Team
 
 ## 🔗 Related Packages
 
-- [@pixora/pixolink-core](../../../core) - Core PixoLink SDK
-- [@pixora/pixolink-intelligence-core](../intelligence-core) - Intelligence orchestration
-- [@pixora/pixolink-pixopay](../pixopay) - Payment processing
-- [@pixora/pixolink-logic-guardian](../logic-guardian) - Validation and error handling
+- [@mamdouh-aboammar/pixolink-core](../../../core) - Core PixoLink SDK
+- [@mamdouh-aboammar/pixolink-intelligence-core](../intelligence-core) - Intelligence orchestration
+- [@mamdouh-aboammar/pixolink-pixopay](../pixopay) - Payment processing
+- [@mamdouh-aboammar/pixolink-logic-guardian](../logic-guardian) - Validation and error handling

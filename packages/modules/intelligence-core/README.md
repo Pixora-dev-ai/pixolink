@@ -1,4 +1,4 @@
-# @pixora/pixolink-intelligence-core
+# @mamdouh-aboammar/pixolink-intelligence-core
 
 Intelligence Orchestration Layer (IOL) plugin for PixoLink — Unified AI coordination, telemetry, and predictive analytics.
 
@@ -15,7 +15,7 @@ The Intelligence Core plugin wraps PixoRA's Intelligence Orchestration Layer, pr
 ## 📦 Installation
 
 ```bash
-pnpm add @pixora/pixolink-intelligence-core
+pnpm add @mamdouh-aboammar/pixolink-intelligence-core
 ```
 
 ## 🚀 Quick Start
@@ -23,8 +23,8 @@ pnpm add @pixora/pixolink-intelligence-core
 ### Basic Setup
 
 ```typescript
-import { PixoLink } from '@pixora/pixolink-core';
-import { createIntelligenceCorePlugin } from '@pixora/pixolink-intelligence-core';
+import { PixoLink } from '@mamdouh-aboammar/pixolink-core';
+import { createIntelligenceCorePlugin } from '@mamdouh-aboammar/pixolink-intelligence-core';
 
 // Initialize PixoLink with Intelligence Core
 const pixo = await PixoLink.init('./pixo.config.json');
@@ -383,7 +383,7 @@ console.log('Dashboard:', dashboard);
 
 ```typescript
 // Validate IOL events
-import { validateWith } from '@pixora/pixolink-logic-guardian';
+import { validateWith } from '@mamdouh-aboammar/pixolink-logic-guardian';
 
 const eventSchema = z.object({
   type: z.enum(['DATA', 'SYSTEM', 'ERROR', 'TELEMETRY', 'PREDICTION']),
@@ -424,7 +424,7 @@ import type {
   ModuleMetadata,
   WeavAIInsight,
   PredictiveSummary,
-} from '@pixora/pixolink-intelligence-core';
+} from '@mamdouh-aboammar/pixolink-intelligence-core';
 
 // Fully typed configuration
 const config: IntelligenceCoreConfig = {
@@ -499,7 +499,7 @@ MIT © PixoRA Team
 
 ## 🔗 Related Packages
 
-- [@pixora/pixolink-core](../../../core) - Core PixoLink SDK
-- [@pixora/pixolink-weavai](../weavai) - WeavAI orchestration plugin
-- [@pixora/pixolink-logic-guardian](../logic-guardian) - Validation and error handling
-- [@pixora/pixolink-pixopay](../pixopay) - Payment processing
+- [@mamdouh-aboammar/pixolink-core](../../../core) - Core PixoLink SDK
+- [@mamdouh-aboammar/pixolink-weavai](../weavai) - WeavAI orchestration plugin
+- [@mamdouh-aboammar/pixolink-logic-guardian](../logic-guardian) - Validation and error handling
+- [@mamdouh-aboammar/pixolink-pixopay](../pixopay) - Payment processing
