@@ -1,0 +1,63 @@
+{
+  "name": "@mamdouh-aboammar/pixolink-pixoguard",
+  "version": "1.0.0",
+  "description": "PixoGuard - Database schema auditing and security analysis for PixoLink",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src --ext .ts",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "pixolink",
+    "pixoguard",
+    "database",
+    "schema",
+    "audit",
+    "security",
+    "rls",
+    "supabase",
+    "postgres",
+    "scanner"
+  ],
+  "dependencies": {
+    "@pixora/pixolink": "workspace:*",
+    "pixoguard": "file:../../../src/pixoguard",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  },
+  "peerDependencies": {
+    "@mamdouh-aboammar/pixolink": ">=1.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pixora/pixolink.git",
+    "directory": "packages/modules/pixoguard"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "author": "PixoRA Team"
+}

@@ -1,0 +1,41 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Build outputs
+dist
+build
+.next
+.turbo
+
+# Testing
+coverage
+.nyc_output
+
+# Environment
+.env
+.env*.local
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs
+pnpm-debug.log*
+lerna-debug.log*
+
+# Temp
+tmp
+temp
+*.tmp

@@ -1,0 +1,69 @@
+{
+  "$schema": "./pixo.config.schema.json",
+  "project_name": "my-pixolink-app",
+  "version": "1.0.0",
+  "description": "My PixoLink application",
+  "environment": "development",
+
+  "connectors": {
+    "supabase": {
+      "url": "${SUPABASE_URL}",
+      "anonKey": "${SUPABASE_ANON_KEY}",
+      "serviceKey": "${SUPABASE_SERVICE_KEY:-}"
+    },
+    "ai": {
+      "provider": "gemini",
+      "apiKey": "${GEMINI_API_KEY}",
+      "models": ["gemini-2.0-flash-exp", "gemini-1.5-pro"],
+      "fallback": "openai"
+    },
+    "payments": {
+      "provider": "stripe",
+      "apiKey": "${STRIPE_SECRET_KEY}",
+      "webhookSecret": "${STRIPE_WEBHOOK_SECRET:-}"
+    },
+    "analytics": [
+      {
+        "provider": "posthog",
+        "apiKey": "${POSTHOG_API_KEY}",
+        "projectId": "${POSTHOG_PROJECT_ID}"
+      }
+    ]
+  },
+
+  "modules": {
+    "pixoguard": {
+      "enabled": true,
+      "config": {
+        "scanInterval": 3600000,
+        "autoFix": false
+      }
+    },
+    "logic_guardian": {
+      "enabled": true,
+      "config": {
+        "circuitBreaker": {
+          "failureThreshold": 5,
+          "resetTimeout": 60000
+        }
+      }
+    },
+    "weavai": true,
+    "pixopay": true,
+    "lumina": {
+      "enabled": true,
+      "config": {
+        "defaultModel": "flux-schnell",
+        "maxConcurrent": 3
+      }
+    },
+    "admin_dashboard": false
+  },
+
+  "telemetry": {
+    "enabled": true,
+    "anonymous": true
+  },
+
+  "locale": "en"
+}

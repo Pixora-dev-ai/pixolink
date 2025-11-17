@@ -1,0 +1,209 @@
+# 🎨 PixoLink Unified SDK
+
+> **One SDK to rule them all** — Modular AI, Security, Payments, and Admin Platform
+
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![npm version](https://img.shields.io/npm/v/@pixora/pixolink.svg)](https://www.npmjs.com/package/@pixora/pixolink)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7+-blue.svg)](https://www.typescriptlang.org/)
+
+## 🚀 What is PixoLink?
+
+PixoLink is a **unified SDK** that combines powerful subsystems into one modular library:
+
+- 🎨 **LUMINA Engine** — AI image/video generation (text-to-image, image-to-video)
+- 🤖 **WeavAI** — Multi-provider AI orchestration (OpenAI, Gemini, Anthropic, DeepSeek)
+- 🛡️ **PixoGuard** — Security & behavior intelligence
+- ⚖️ **Logic Guardian** — Runtime validation & circuit breakers
+- 💳 **PixoPay** — Payment processing (Instapay, Vodafone Cash, Stripe)
+- 📊 **Admin Dashboard** — Complete admin interface with analytics
+
+## ✨ Features
+
+✅ **One-line initialization** — Configure everything via `pixo.config.json`  
+✅ **Modular architecture** — Enable/disable modules as needed  
+✅ **Type-safe** — Full TypeScript support with IntelliSense  
+✅ **Framework agnostic** — Works with React, Next.js, Node.js, Edge functions  
+✅ **Unified connectors** — Single interface for Supabase, AI providers, analytics, payments  
+✅ **AI-agent friendly** — Built-in documentation for Copilot, Cursor, Bolt  
+✅ **Production-ready** — Battle-tested in PrePilot.cloud and PixoRA
+
+## 📦 Installation
+
+```bash
+# Using pnpm (recommended)
+pnpm add @pixora/pixolink
+
+# Using npm
+npm install @pixora/pixolink
+
+# Using yarn
+yarn add @pixora/pixolink
+```
+
+## 🎯 Quick Start
+
+### 1. Create Configuration
+
+Create `pixo.config.json`:
+
+```json
+{
+  "project_name": "my-app",
+  "connectors": {
+    "supabase": {
+      "url": "${SUPABASE_URL}",
+      "anonKey": "${SUPABASE_ANON_KEY}",
+      "serviceKey": "${SUPABASE_SERVICE_KEY}"
+    },
+    "ai": {
+      "provider": "gemini",
+      "apiKey": "${GEMINI_API_KEY}"
+    },
+    "payments": {
+      "provider": "stripe",
+      "apiKey": "${STRIPE_SECRET_KEY}"
+    }
+  },
+  "modules": {
+    "pixoguard": true,
+    "logic_guardian": true,
+    "weavai": true,
+    "pixopay": true,
+    "lumina": true,
+    "admin_dashboard": false
+  }
+}
+```
+
+### 2. Initialize SDK
+
+```typescript
+import { PixoLink, useConnector } from '@pixora/pixolink';
+
+// Initialize once at app startup
+await PixoLink.init('./pixo.config.json');
+
+// Use connectors
+const ai = useConnector('ai-core');
+const result = await ai.generate('an Egyptian digital portrait in neon style');
+
+console.log(result.url);
+```
+
+### 3. Use UI Components
+
+```tsx
+import { PixoDashboard } from '@pixora/pixolink/ui';
+
+function AdminPage() {
+  return <PixoDashboard />;
+}
+```
+
+## 🧩 Architecture
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                    PixoLink Core                        │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐    │
+│  │   Config    │  │   Plugin    │  │  Connector  │    │
+│  │   Loader    │  │   Manager   │  │     Hub     │    │
+│  └─────────────┘  └─────────────┘  └─────────────┘    │
+└─────────────────────────────────────────────────────────┘
+                           │
+        ┌──────────────────┼──────────────────┐
+        ▼                  ▼                  ▼
+┌──────────────┐  ┌──────────────┐  ┌──────────────┐
+│   Modules    │  │  Connectors  │  │      UI      │
+├──────────────┤  ├──────────────┤  ├──────────────┤
+│ • WeavAI     │  │ • Supabase   │  │ • Dashboard  │
+│ • PixoGuard  │  │ • OpenAI     │  │ • Widgets    │
+│ • Logic      │  │ • Gemini     │  │ • Hooks      │
+│   Guardian   │  │ • Stripe     │  │              │
+│ • PixoPay    │  │ • Instapay   │  │              │
+│ • LUMINA     │  │ • Analytics  │  │              │
+│ • Admin      │  │              │  │              │
+└──────────────┘  └──────────────┘  └──────────────┘
+```
+
+## 📚 Documentation
+
+- [**Developer Guide**](./docs/DEVELOPERS_GUIDE.md) — Setup, examples, API reference
+- [**AI Agents Guide**](./docs/AI_AGENTS_GUIDE.md) — Documentation for Copilot/Cursor
+- [**Module Reference**](./docs/MODULES_REFERENCE.md) — Detailed API for each module
+- [**Migration Guide**](./docs/MIGRATION_GUIDE.md) — Upgrading from legacy systems
+
+## 🛠️ CLI Tools
+
+```bash
+# Initialize new project with template
+pixolink init my-app --template=saas
+
+# Add a module
+pixolink add lumina
+
+# Configure interactively
+pixolink config
+
+# Sync database schemas
+pixolink sync
+
+# Diagnose setup issues
+pixolink diagnose
+```
+
+## 🎨 Module Overview
+
+### WeavAI (Multi-Provider AI)
+```typescript
+const ai = useConnector('ai-core');
+const response = await ai.generate('Create a cinematic photo', {
+  model: 'gemini-2.0-flash-exp',
+  temperature: 0.7
+});
+```
+
+### LUMINA (Image/Video Generation)
+```typescript
+const lumina = PixoLink.modules.get('lumina');
+const image = await lumina.textToImage('Egyptian pyramid at sunset');
+const video = await lumina.imageToVideo(image.url);
+```
+
+### PixoPay (Payments)
+```typescript
+const payment = useConnector('pixopay');
+await payment.handlePayment('instapay', {
+  amount: 200,
+  currency: 'EGP',
+  phone: '+201234567890'
+});
+```
+
+### Logic Guardian (Validation)
+```typescript
+const guardian = PixoLink.modules.get('logic-guardian');
+const result = await guardian.executeWithCircuitBreaker(
+  async () => fetchExternalAPI(),
+  { maxRetries: 3 }
+);
+```
+
+## 🤝 Contributing
+
+We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## 📄 License
+
+MIT © PixoRA Team
+
+## 🔗 Links
+
+- [Documentation](https://docs.pixolink.dev)
+- [GitHub](https://github.com/pixora/pixolink)
+- [npm](https://www.npmjs.com/package/@pixora/pixolink)
+- [Discord Community](https://discord.gg/pixolink)
+
+---
+
+**Built with ❤️ by the PixoRA Team**

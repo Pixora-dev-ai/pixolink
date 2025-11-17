@@ -1,0 +1,60 @@
+{
+  "name": "@mamdouh-aboammar/pixolink-intelligence-core",
+  "version": "1.0.0",
+  "description": "Intelligence Orchestration Layer module for PixoLink — Unified AI coordination, telemetry, and predictive analytics",
+  "license": "MIT",
+  "author": "PixoRA Team",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src --ext .ts",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "pixolink",
+    "intelligence-orchestration",
+    "ai-coordination",
+    "telemetry",
+    "predictive-analytics",
+    "event-bus",
+    "registry"
+  ],
+  "dependencies": {
+    "@pixora/pixolink": "workspace:*",
+    "intelligence-core": "file:../../../src/intelligence-core",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "peerDependencies": {
+    "@mamdouh-aboammar/pixolink": ">=1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pixora/pixolink.git",
+    "directory": "packages/modules/intelligence-core"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

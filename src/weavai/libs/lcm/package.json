@@ -1,0 +1,42 @@
+{
+  "name": "@pixora/lcm",
+  "version": "1.0.0",
+  "description": "LUMINA Context Memory - Intelligent prompt and behavioral memory layer for PixoRA",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch"
+  },
+  "keywords": [
+    "lumina",
+    "memory",
+    "context",
+    "ai",
+    "pixora"
+  ],
+  "author": "PixoRA Team",
+  "license": "MIT",
+  "dependencies": {
+    "dexie": "^4.0.0"
+  },
+  "peerDependencies": {
+    "@supabase/supabase-js": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  }
+}
