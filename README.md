@@ -6,6 +6,56 @@
 [![npm version](https://img.shields.io/npm/v/@mamdouh-aboammar/pixolink.svg)](https://www.npmjs.com/package/@mamdouh-aboammar/pixolink)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7+-blue.svg)](https://www.typescriptlang.org/)
 
+> “Because wasting tokens is not a personality trait.”
+
+---
+
+## 🧩 ABOUT – The Story Behind PixoLink SDK
+
+### 🚀 What is PixoLink SDK?
+
+PixoLink SDK is a unified developer toolkit designed for modern builders who code with vibes, not burnout. It’s a smart, ready-to-inject SDK that merges AI logic, payment systems, security layers, logic guards, and admin dashboards — all under one simple import.
+
+Think of it as your instant full‑stack starter, made for the new era of AI‑powered indie devs and vibe coders who just want to ship faster, smarter, and saner.
+
+### 💡 Why We Built It
+
+We got tired of seeing devs rebuild the same stuff — authentication, dashboards, payments, AI connectors — every single time. Every new project felt like déjà vu with more boilerplate, more tokens wasted, and less fun.
+
+So we asked ourselves:
+
+“Why rebuild what’s already built and working?”
+
+And that’s how PixoLink SDK was born. A toolkit that just works, out of the box — no 400‑tab debugging, no setup purgatory. Just plug, vibe, and ship.
+
+### 🧠 The Core Idea
+
+PixoLink isn’t just a library — it’s a modular ecosystem. Each module works alone or together:
+
+- 🧩 Logic Guardian — Keeps your code clean, consistent, and safe from spaghetti.
+- 💳 PixoPay — Build your own payment gateway in minutes (yes, even in Egypt 🇪🇬).
+- 🔒 PixoGuard — Security that actually understands your app’s behavior.
+- 🤖 WeavAI — The multi‑brain AI core that syncs with Gemini, OpenAI, and Anthropic.
+- ⚙️ Admin Dashboard — Because your backend deserves to look good too.
+- 🎨 LUMINA Engine — A powerful visual engine for generating images, videos, and beyond.
+
+All wrapped in one SDK that feels like magic — but it’s just clean engineering and smart integration.
+
+### 🌍 The Mission
+
+To give every developer — from Cairo to California — the ability to launch powerful AI‑integrated products in hours, not months. We believe dev tools should feel like music, not machinery. And PixoLink is our instrument for that.
+
+### ❤️ Built by PixoRA
+
+PixoLink SDK is part of the PixoRA ecosystem, created with the same obsessive focus on:
+
+- Developer experience
+- Simplicity
+- Humor
+- Real‑world practicality
+
+We build tools that remove friction, save tokens, and help coders create amazing products — without feeling like they’re doing unpaid DevOps.
+
 ## 🚀 What is PixoLink?
 
 PixoLink is a **unified SDK** that combines powerful subsystems into one modular library:
@@ -102,7 +152,7 @@ function AdminPage() {
 
 ## 🧩 Architecture
 
-```
+```text
 ┌─────────────────────────────────────────────────────────┐
 │                    PixoLink Core                        │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐    │
@@ -155,6 +205,7 @@ pixolink diagnose
 ## 🎨 Module Overview
 
 ### WeavAI (Multi-Provider AI)
+
 ```typescript
 const ai = useConnector('ai-core');
 const response = await ai.generate('Create a cinematic photo', {
@@ -164,6 +215,7 @@ const response = await ai.generate('Create a cinematic photo', {
 ```
 
 ### LUMINA (Image/Video Generation)
+
 ```typescript
 const lumina = PixoLink.modules.get('lumina');
 const image = await lumina.textToImage('Egyptian pyramid at sunset');
@@ -171,6 +223,7 @@ const video = await lumina.imageToVideo(image.url);
 ```
 
 ### PixoPay (Payments)
+
 ```typescript
 const payment = useConnector('pixopay');
 await payment.handlePayment('instapay', {
@@ -181,6 +234,7 @@ await payment.handlePayment('instapay', {
 ```
 
 ### Logic Guardian (Validation)
+
 ```typescript
 const guardian = PixoLink.modules.get('logic-guardian');
 const result = await guardian.executeWithCircuitBreaker(
@@ -199,11 +253,10 @@ MIT © PixoRA Team
 
 ## 🔗 Links
 
-- [Documentation](https://docs.pixolink.dev)
-- [GitHub](https://github.com/pixora/pixolink)
-- [npm](https://www.npmjs.com/package/@pixora/pixolink)
-- [Discord Community](https://discord.gg/pixolink)
+- [Documentation (GitHub)](https://github.com/Pixora-dev-ai/pixolink/tree/main/docs)
+- [GitHub](https://github.com/Pixora-dev-ai/pixolink)
+- [npm](https://www.npmjs.com/package/@mamdouh-aboammar/pixolink)
 
 ---
 
-**Built with ❤️ by the PixoRA Team**
+### Built with ❤️ by the PixoRA Team

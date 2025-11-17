@@ -1,7 +1,7 @@
 {
   "name": "@mamdouh-aboammar/pixolink",
   "version": "1.0.0",
-  "description": "PixoLink Core - Unified SDK orchestrator",
+  "description": "Unified AI, Security, Payments & Admin SDK — ship faster with one import",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -52,9 +52,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pixora/pixolink.git",
+    "url": "https://github.com/Pixora-dev-ai/pixolink.git",
     "directory": "packages/core"
   },
+  "homepage": "https://github.com/Pixora-dev-ai/pixolink#readme",
   "publishConfig": {
     "access": "public"
   }
